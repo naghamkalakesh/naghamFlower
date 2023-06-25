@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row ">
+        <?php
+        if (!empty($_SESSION['hasOpen']) && $_SESSION['hasOpen']) {
+            echo "
+                    <div class='col-md-2 col-xs-2 top-menu'>
+                       " . $_SESSION['username'] . "
+                    </div>
+                    <div class='col-md-2 col-xs-2 top-menu'>
+                    <a href='php/logout.php'><span style='text-align:center'>logout</span></a>
+                    </div>
+                    
+                    ";
+        } else {
+            echo "
+                    <div class='col-md-2 col-xs-2 top-menu'>
+                    <a href='registration.php'>Registration</a>
+                    </div>
+                    <div class='col-md-2 col-xs-2 top-menu'>
+                    <a href='login.php'><span style='text-align:center'>Login</span></a>
+                    </div>
+                    ";
+        }
+
+        ?>
+
+
+        <div class="col-md-1 col-xs-1 top-menu ">
+            <a href="card.php" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Cart is empty"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+        </div>
+        <div class="col-md-3 col-xs-3 top-menu">
+            <!-- <form class="form-search-header form-inline">
+                <label class="sr-only" for="exampleInputsearch">Search</label>
+                <input type="text" class="form-control" id="exampleInputsearch" placeholder="Search" style="width:175px;float: left;" />
+                <button type="submit" class="form-control" id="exampleInputgo" style="width: 35px">Go</button>
+
+
+
+            </form> -->
+
+        </div><!-- end of col-->
+
+
+    </div><!--end of row-->
+
+</div><!-- end of container-->
+
